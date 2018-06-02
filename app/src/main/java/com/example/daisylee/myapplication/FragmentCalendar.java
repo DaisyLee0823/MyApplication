@@ -1,5 +1,6 @@
 package com.example.daisylee.myapplication;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -9,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
@@ -26,19 +28,14 @@ public class FragmentCalendar extends Fragment {
 
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_tab_calendar,container,false);
-        calendarView = (CalendarView) view.findViewById(R.id.calendarView);
-        myDate = (TextView) view.findViewById(R.id.myDate);
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String date = year+" / "+ (month+1) +" / "+ dayOfMonth;
-                myDate.setText(date);
-            }
-        });
+        WebView webView = (WebView) view.findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://calendar.google.com/calendar/embed?src=secret%40gapp.fju.edu.tw&ctz=Asia%2FTaipei");
 
 
 

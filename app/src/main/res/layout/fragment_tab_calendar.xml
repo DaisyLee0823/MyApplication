@@ -5,37 +5,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F1F1EF">
-    <LinearLayout
-        android:layout_marginTop="30dp"
+    <WebView
+        android:id="@+id/webview"
         android:layout_width="match_parent"
-        android:layout_height="55dp">
-        <TextView
-            android:id="@+id/myDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="mark your date"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="110dp"/>
-    </LinearLayout>
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp">
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="wrap_content"
-            android:layout_height="350dp"
-            android:background="@drawable/bg_calendar">
-
-        </CalendarView>
-
-    </LinearLayout>
+    </WebView>
 
 </LinearLayout>
