@@ -21,7 +21,8 @@
         <activity android:name=".FragmentSetting" />
         <activity android:name=".WeatherActivity" />
         <activity android:name=".HoroscopeActivity" />
-        <activity android:name=".NewsActivity">
+        <activity android:name=".NewsActivity"/>
+        <activity android:name=".AddToDoListActivity">
 
         </activity>
     </application>
